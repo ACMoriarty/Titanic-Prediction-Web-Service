@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Titanic Prediction</title>
+    <style>
+        .form-group {text-align: center;}
+        .form-control {text-align: center;}
+        h1,h5 {text-align: center;}
+    </style>
+  </head>
+  <body bgcolor:'#E1C290'>
+
+
+
+      <div class="container">
+
+      <div class="jumbotron">
+        <img src="https://cdn.britannica.com/72/153172-050-EB2F2D95/Titanic.jpg" height="400" width="880" alt="">
+      <form action="pred" method='POST'>
+        {% csrf_token %}
+        <h1 class="display-4">{{a}}</h1>
+        <hr>
+        <h5 style='color:red;'>Please input '1' if the field is true and '0' if it is not</h5>
+        <hr>
+        <b>
+        <div class="form-group">
+        <label for="Pclass">Class 1</label>
+        <input type="number" class="form-control" id="Pclass" name="class1" value="1">
+        <br>
+        <label for="Pclass">Class 2</label>
+        <input type="number" class="form-control" id="Pclass" name="class2" value="0">
+        <br>
+        <label for="Pclass">Class 3</label>
+        <input type="number" class="form-control" id="Pclass" name="class3" value="0">
+        <br>
+        <label for="Sex">Gender_Male</label>
+        <input type="number" class="form-control" id="Sex" name="male" value="1">
+        <br>
+        <label for="Sex">Gender_Female</label>
+        <input type="number" class="form-control" id="Sex" name="female" value="0">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" name="Age" value="23">
+        <br>
+        <label for="SibSp">SibSp</label>
+        <input type="number" class="form-control" id="SibSp" name="SibSp" value="2">
+        <br>
+        <label for="Parch">Parch</label>
+        <input type="number" class="form-control" id="Parch" name="Parch" value="0">
+        <br>
+        <label for="fare">Fare</label>
+        <input type="number" class="form-control" id="fare" name="Fare" value="34">
+        <br>
+        <label for="embarked">Port_C</label>
+        <input type="text" class="form-control" id="embarked" name="port_c" value="0">
+        <br>
+        <label for="embarked">Port_Q</label>
+        <input type="text" class="form-control" id="embarked" name="port_q" value="0">
+        <br>
+        <label for="embarked">Port_S</label>
+        <input type="text" class="form-control" id="embarked" name="port_s" value="1">
+        <br>
+      </b>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      </form>
+
+        </div>
+      </div>
+  </body>
+</html>
